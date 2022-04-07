@@ -2,7 +2,7 @@
 /**
  * main -Entry - point
  *
- *Return After a print 0 (success)
+ *Return: After a print 0 (success)
  */
 int main(void)
 {

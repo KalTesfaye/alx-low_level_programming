@@ -14,12 +14,12 @@ int main(void)
 	{
 	for (num = 48; num <= 57; num++)
 	{
-		putchar(num2);
-		putchar(num);
 		if (num2 > num)
 		{
 			continue;
 		}
+		putchar(num2);
+		putchar(num);
 		if (num == 57 && num2 == 56)
 		{
 			break;

@@ -16,7 +16,7 @@ int main(void)
 	{
 		putchar(num2);
 		putchar(num);
-		if (num2 > num)
+		if (num2 < num)
 		{
 			continue;
 		}

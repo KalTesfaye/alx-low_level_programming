@@ -19,7 +19,7 @@ void times_table(void)
 			{
 				continue;
 			}
-			_putchar(', ');
+			_putchar('\, ');
 		}
 		_putchar('\n');
 	}

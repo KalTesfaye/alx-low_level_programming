@@ -17,7 +17,7 @@ int main(void)
 		{
 			break;
 		}
-		if(nex % 2 == 0)
+		if (nex % 2 == 0)
 		{
 			sum += nex;
 		}

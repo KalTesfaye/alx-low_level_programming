@@ -10,12 +10,12 @@ int main(void)
 	int i;
 	long int nex = t1 + t2;
 
-	for (i = 1; i < 50; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		printf("%ld", nex);
 		printf(", ");
 
-		t1 =t2;
+		t1 = t2;
 		t2 = nex;
 		nex = t1 + t2;
 	}

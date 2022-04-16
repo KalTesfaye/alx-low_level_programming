@@ -28,7 +28,7 @@ void print_times_table(int n)
 				_putchar(' ');
 			}
 			_putchar(prod % 10 + '0');
-			if (minute == 9)
+			if (minute == n)
 			{
 				continue;
 			}

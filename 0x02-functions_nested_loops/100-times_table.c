@@ -19,11 +19,20 @@ void print_times_table(int n)
 		for (minute = 0; minute <= n; minute++)
 		{
 			prod = hour * minute;
+			if (prod >99)
+			{
+				_putchar(' ');
+				_putchar(prod / 100 + '0')
+			}
 			if (prod > 9)
 			{
 			_putchar(prod / 10 + '0');
 			}
 			if (minute != 0 && prod <= 9)
+			{
+				_putchar(' ');
+			}
+			if (minute!=0 && prod <= 99)
 			{
 				_putchar(' ');
 			}

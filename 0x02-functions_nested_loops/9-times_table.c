@@ -15,6 +15,11 @@ void times_table(void)
 		for (minute = 0; minute <= 9; minute++)
 		{
 			_putchar(hour * minute + '0');
+			if (minute == 9)
+			{
+				continue;
+			}
+			_putchar(', ');
 		}
 		_putchar('\n');
 	}

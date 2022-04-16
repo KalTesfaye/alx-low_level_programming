@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int t1 = 0, t2 = 1;
+	long int t1 = 0, t2 = 1;
 	int i;
-	int nex = t1 + t2;
+	long int nex = t1 + t2;
 
 	for (i = 1; i < 50; i++)
 	{

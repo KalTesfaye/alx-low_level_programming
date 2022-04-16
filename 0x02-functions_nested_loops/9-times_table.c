@@ -16,6 +16,6 @@ void times_table(void)
 		{
 			_putchar(hour * minute + '0');
 		}
-		_putchar('\n')
+		_putchar('\n');
 	}
 }

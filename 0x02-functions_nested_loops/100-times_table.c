@@ -26,6 +26,7 @@ void print_times_table(int n)
 			if (minute != 0 && prod <= 9)
 			{
 				_putchar(' ');
+				_putchar(' ');
 			}
 			_putchar(prod % 10 + '0');
 			if (minute == n)
@@ -33,6 +34,7 @@ void print_times_table(int n)
 				continue;
 			}
 			_putchar(',');
+			_putchar(' ');
 			_putchar(' ');
 		}
 		_putchar('\n');

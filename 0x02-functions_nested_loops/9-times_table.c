@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * jack_bauer - check code
+ *times_table - check code
  *
  * Return : 0
  */
-void jack_bauer(void)
+void times_table(void)
 {
 	int hour;
 	int minute;

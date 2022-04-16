@@ -17,7 +17,10 @@ void times_table(void)
 			int prod;
 			prod = hour * minute;
 			_putchar(prod / 10 + '0');
+			if (prod < 9)
+			{
 			_putchar(prod % 10 + '0');
+			}
 			if (minute == 9)
 					{
 					continue;

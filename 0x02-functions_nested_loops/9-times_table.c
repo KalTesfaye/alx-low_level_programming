@@ -26,9 +26,9 @@ void times_table(void)
 			}
 			_putchar(prod % 10 + '0');
 			if (minute == 9)
-					{
-					continue;
-					}
+			{
+				continue;
+			}
 			_putchar(',');
 			_putchar(' ');
 		}

@@ -13,7 +13,7 @@ int main(void)
 
 	for (i = 1; i <= 50; i++)
 	{
-		if (nex > 4000000)
+		if (nex >= 4000000)
 		{
 			break;
 		}

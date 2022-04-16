@@ -3,6 +3,7 @@
 
 /**
  * _islower - check the code
+ * @c: the charracter to be checked
  *
  * Return: 0
  */

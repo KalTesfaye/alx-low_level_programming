@@ -19,7 +19,6 @@ int main(void)
 		t2 = nex;
 		nex = t1 + t2;
 	}
-	printf("%d", mul);
 	printf("\n");
 	return (0);
 }

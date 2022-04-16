@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print-sign - check the code
- * @c: the value to be checked
+ * print_sign - check the code
+ * @n: the value to be checked
  *
  * Return: 0
  */

@@ -22,7 +22,7 @@ int main(void)
 		t2 = nex;
 		nex = t1 + t2;
 	}
-	printf("%d", sum);
+	printf("%ld", sum);
 	printf("\n");
 	return (0);
 }

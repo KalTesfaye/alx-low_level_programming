@@ -14,7 +14,7 @@ void times_table(void)
 	{
 		for (minute = 0; minute <= 9; minute++)
 		{
-			_putchar(hour * minute + '0');
+			_putchar(hour * minute);
 			if (minute == 9)
 			{
 				continue;

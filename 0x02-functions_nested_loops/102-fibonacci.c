@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 1; i < 50; i++)
 	{
-		printf("%d", nex);
+		printf("%ld", nex);
 		printf(", ");
 
 		t1 =t2;

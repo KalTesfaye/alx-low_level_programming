@@ -17,9 +17,9 @@ int main(void)
 		{
 			break;
 		}
-		if(nex % 2 == 0)
+		if(i % 2 == 0)
 		{
-			sum +=nex;
+			sum += nex;
 		}
 
 		t1 = t2;

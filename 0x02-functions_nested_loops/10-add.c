@@ -2,8 +2,7 @@
 
 /**
  * add - sum two numbers
- * @num1: first num
- * @num2 2nd num
+ * @num1 @num2: first num
  *
  * Return: 0
  */
@@ -11,6 +10,6 @@ int add(int num1, int num2)
 {
 	int sum;
 
-	sum =num1 + num2;
+	sum = num1 + num2;
 	return (sum);
 }

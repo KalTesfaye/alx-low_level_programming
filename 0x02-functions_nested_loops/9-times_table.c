@@ -11,9 +11,9 @@ void times_table(void)
 	int minute;
 	int prod;
 
-	for (hour = 0; hour <= 23; hour++)
+	for (hour = 0; hour <= 9; hour++)
 	{
-		for (minute = 0; minute <= 59; minute++)
+		for (minute = 0; minute <= 9; minute++)
 		{
 			prod = hour * minute;
 			if (prod < 9)

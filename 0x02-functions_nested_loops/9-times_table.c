@@ -16,11 +16,12 @@ void times_table(void)
 		for (minute = 0; minute <= 9; minute++)
 		{
 			prod = hour * minute;
-			if (prod < 9)
+			if (prod > 9)
 			{
 			_putchar(prod / 10 + '0');
 			}
 			_putchar(prod % 10 + '0');
+			}
 			if (minute == 9)
 					{
 					continue;

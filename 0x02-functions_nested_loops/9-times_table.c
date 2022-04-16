@@ -20,7 +20,7 @@ void times_table(void)
 			{
 			_putchar(prod / 10 + '0');
 			}
-			if (prod > 0 && prod < 9)
+			if (hour != 0 && prod <= 9)
 			{
 				_putchar(' ');
 			}

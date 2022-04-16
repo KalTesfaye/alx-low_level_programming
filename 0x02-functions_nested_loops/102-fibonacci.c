@@ -13,6 +13,10 @@ int main(void)
 	for (i = 1; i <= 50; i++)
 	{
 		printf("%ld", nex);
+		if (i == 50)
+		{
+			continue;
+		}
 		printf(", ");
 
 		t1 = t2;

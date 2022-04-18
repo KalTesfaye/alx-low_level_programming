@@ -7,7 +7,7 @@
  *
  * Return: 0
  */
-void *_strcpy(char *dest, char *src)
+char  *_strcpy(char *dest, char *src)
 {
 	int i;
 	int j;
@@ -20,5 +20,5 @@ void *_strcpy(char *dest, char *src)
 	{
 		dest[j] = src[j];
 	}
-	
+	return (dest);	
 }

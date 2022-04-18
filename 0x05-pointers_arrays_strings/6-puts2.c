@@ -17,6 +17,7 @@ void puts2(char *str)
 	{
 		if (c % 2 != 0)
 		{
+			c++;
 			continue;
 		}
 		_putchar(m[c]);

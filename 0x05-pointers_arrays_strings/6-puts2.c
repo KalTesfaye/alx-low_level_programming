@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _puts - print a string
+ * puts2 - print a string
  * @str: str to be print
  *
  * Return: 0
  */
-void _puts(char *str)
+void puts2(char *str)
 {
 	char *m;
 	int c;

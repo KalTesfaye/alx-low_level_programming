@@ -13,14 +13,14 @@ void print_rev(char *s)
 	int i;
 
 	c = 0;
-	m = str;
+	m = s;
 	while (m[c] != '\0')
 	{
 		c++;
 	}
 	for (i = c; i >= 0; i--)
 	{
-		_putchar(m[i])
+		_putchar(m[i]);
 	}
 	_putchar('\n');
-}
+

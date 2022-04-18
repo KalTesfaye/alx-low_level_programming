@@ -8,12 +8,14 @@
  */
 void _puts(char *str)
 {
+	char *m;
 	int c;
 
 	c = 0;
-	while (str[c] != '\0')
+	m = str;
+	while (m[c] != '\0')
 	{
-		_putchar(str[c]);
+		_putchar(m[c]);
 		c++;
 	}
 }

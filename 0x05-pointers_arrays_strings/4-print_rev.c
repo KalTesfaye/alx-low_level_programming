@@ -23,4 +23,4 @@ void print_rev(char *s)
 		_putchar(m[i]);
 	}
 	_putchar('\n');
-
+}

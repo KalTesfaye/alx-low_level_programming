@@ -15,11 +15,13 @@ void puts2(char *str)
 	m = str;
 	while (m[c] != '\0')
 	{
-		if (c % 2 == 0)
+		if (c % 2 != 0)
 		{
+			continue;
+		}
 		_putchar(m[c]);
 		c++;
-		}
+		
 	}
 	_putchar('\n');
 }

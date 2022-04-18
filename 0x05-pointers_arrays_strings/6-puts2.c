@@ -22,7 +22,6 @@ void puts2(char *str)
 		}
 		_putchar(m[c]);
 		c++;
-		
 	}
 	_putchar('\n');
 }

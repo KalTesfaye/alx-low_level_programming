@@ -17,15 +17,11 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-		number = (s[i] - 48) + number * 10;
-		if (s[i + 1] == ' ')
-		{
-			break;
-		}
 		if (s[i] == '-')
 		{
-			sign *= -1;
+			sign = -1;
 		}
+		number = (s[i] - 48) + number * 10;
 		i++;
 	}
 	return (number * sign);

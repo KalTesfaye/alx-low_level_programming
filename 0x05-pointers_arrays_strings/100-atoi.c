@@ -21,7 +21,7 @@ int _atoi(char *s)
 		{
 			sign = -1;
 		}
-		number = (s[i] - 48) + number * 10;
+		number = s[i] + number * 10;
 		i++;
 	}
 	return (number * sign);

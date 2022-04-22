@@ -5,26 +5,27 @@
  * @s1: the first char
  * @s2: the second chars
  *
- * Return -ve +ve or 0
+ * Return: -ve +ve or 0
  */
 int _strcmp(char *s1, char *s2)
 {
 	int i;
+	int answer;
 
 	for (i = 0; s1[i] != '\n' || s2[i] != '\n'; i++)
 	{
 		if (s1[i] < s2[i])
 		{
-			return (15 * -1);
+			answer = -15;
 		}
 		else if (s1[i] > s2[i])
 		{
-			return (15);
+			answer = 15;
 		}
 		else
 		{
-			continue;
+			answer = 0;
 		}
 	}
-	return (0);
+	return (answer);
 }

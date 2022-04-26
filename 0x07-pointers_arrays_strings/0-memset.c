@@ -16,5 +16,5 @@ char *_memset(char *s, char b, sign_t n)
 			*ptr++ = b;
 			n--;
 		}
-		return (s);
+		return (ptr);
 		}

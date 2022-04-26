@@ -8,13 +8,13 @@
  *
  * Return: pointer to s
  */
-char *_memset(char *s, char b, sign_t n)
+char *_memset(char *s, char b, unsigned int n)
 		{
-		unsigned char *ptr = s;
-		while (n > 0)
+		unsigned int i;
+
+		for (i = 0; i < n; i++)
 		{
-			*ptr++ = b;
-			n--;
+			s[i] == b;
 		}
-		return (ptr);
+		return (s);
 		}

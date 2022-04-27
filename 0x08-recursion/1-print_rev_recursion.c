@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _puts_recursion - print str with new line
+ * _print_rev_recursion - print str with new line
  * @s:the string to be printed
  *
  * Return: 0
  */
-void _puts_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
 	int n;
 
@@ -21,7 +21,7 @@ void _puts_recursion(char *s)
 	}
 	else
 	{
-	_puts_recursion(s + n);
+	_print_rev_recursion(s + n);
 	_putchar(*s);
 	}
 }

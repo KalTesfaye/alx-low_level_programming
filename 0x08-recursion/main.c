@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	_puts_recursion("puts with recursions");
+	_print_rev_recursion("\ncolton Walker");
 	return (0);
 }

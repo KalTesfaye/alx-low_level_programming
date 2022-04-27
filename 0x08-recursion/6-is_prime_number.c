@@ -11,7 +11,7 @@ int _is_prime_number(int n)
 	int i;
 
 	i = n;
-	if (i % __is_prime_number(n - 1) == 0)
+	if (i % _is_prime_number(n - 1) == 0)
 	{
 		return (1);
 	}

@@ -6,12 +6,12 @@
  *
  * Return: 1 or -1
  */
-int _is_prime_number(int n)
+int is_prime_number(int n)
 {
 	int i;
 
 	i = n;
-	if (i % _is_prime_number(n - 1) == 0)
+	if (i % is_prime_number(n - 1) == 0)
 	{
 		return (1);
 	}

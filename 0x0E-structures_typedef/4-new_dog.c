@@ -37,17 +37,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		}
 	while (name[i])
 	{
-		nam[i] == name[i];
+		nam[i] = name[i];
 		i++;
 	}
-	nam[i] == name[i];
+	nam[i] = name[i];
 	i = 0;
 	while (owner[i])
 	{
-		own[i] == owner[i];
+		own[i] = owner[i];
 		i++;
 	}
-	own[i] == owner[i];
+	own[i] = owner[i];
 	d->name = name;
 	d->age = age;
 	d->owner = owner;

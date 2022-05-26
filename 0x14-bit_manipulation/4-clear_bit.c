@@ -8,13 +8,11 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
+	int add;
 
-	unsigned long int b;
-
-	if (n == NULL)
+	if (index > 63)
 		return (-1);
-	b = 1 << index;
-	if ((b | *n) == *n)
-		*n = *n ^ b;
+	add = 1 << index;
+	*n = *n & (~add);
 	return (1);
 }

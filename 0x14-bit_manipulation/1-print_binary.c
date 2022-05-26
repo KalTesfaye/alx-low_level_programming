@@ -2,6 +2,7 @@
 
 /**
  * print_binary - Prints the binary representation of a number
+ * Prototype: void print_binary(unsigned long int n);
  * @n: dec input
  * Return: 0
  */
@@ -14,15 +15,12 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		return;
 	}
-
 	temp = n;
-
 	while (temp != 0)
 	{
 		i++;
 		temp = temp >> 1;
 	}
-
 	for (count = i - 1; count >= 0; count--)
 	{
 		k = n >> count;

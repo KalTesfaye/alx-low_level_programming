@@ -1,85 +1,74 @@
 #include "main.h"
-
-
+void closer(int arg_files);
 /**
- * _err - function to check for error code
- * @stat: error code to be checked
- * Return: void
+ * main - Entry Point
+ * @argc: # of args
+ * @argv: array pointer for args
+ * Return: 0
  */
-void _err(int stat, ...)
+int main(int argc, char *argv[])
 {
-	va_list list;
-
-	va_start(list, stat);
-	if (stat == 97)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-	else if (stat == 98)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file ");
-		dprintf(STDERR_FILENO, "%s\n", va_arg(list, char *));
-		exit(98);
-	}
-	else if (stat == 99)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to ");
-		dprintf(STDERR_FILENO, "%s\n", va_arg(list, char *));
-		exit(99);
-	}
-	else
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd ");
-		dprintf(STDERR_FILENO, "%d\n", va_arg(list, int));
-		exit(100);
-	}
-	va_end(list);
-}
-
-/**
- * main - main function entry point
- * @argc: number of arguments passed
- * @argv: arguments being passed
- * Return: 98 read err, 99 write err, 100 close err, 0 sucess
- *
- */
-int main(int argc, char **argv)
-{
-	int input, output, input_r, output_w;
-	char *buff;
+	int file_from, file_to, file_from_r, wr_err;
+	char buf[1024];
 
 	if (argc != 3)
-		_err(97);
-	if (argv[1] == NULL)
-		_err(98, argv[1]);
-	if (argv[2] == NULL)
-		_err(99, argv[2]);
-	input = open(argv[1], O_RDONLY);
-	if (input == -1)
-		_err(98, argv[1]);
-	output = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (output == -1)
-		_err(99, argv[2]);
-	buff = malloc(BUFFSIZE * sizeof(char));
-	if (buff == NULL)
-		return (1);
-	input_r = read(input, buff, BUFFSIZE);
-	if (input_r == -1)
-		_err(98, argv[1]);
-	while (input_r > 0)
 	{
-		output_w = write(output, buff, input_r);
-		if (output_w == -1)
-			_err(99, argv[2]);
-		input_r = read(input, buff, BUFFSIZE);
-		if (input_r == -1)
-			_err(98, argv[1]);
+		dprintf(2, "Usage: cp file_from file_to\n");
+		exit(97);
 	}
-	if (close(input) == -1)
-		_err(100, input);
-	if (close(output) == -1)
-		_err(100, output);
-	free(buff);
+
+	file_from = open(argv[1], O_RDONLY);
+	if (file_from == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+
+	file_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	if (file_to == -1)
+	{
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+
+	while (file_from_r >= 1024)
+	{
+		file_from_r = read(file_from, buf, 1024);
+		if (file_from_r == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			closer(file_from);
+			closer(file_to);
+			exit(98);
+		}
+		wr_err = write(file_to, buf, file_from_r);
+		if (wr_err == -1)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+	}
+
+	closer(file_from);
+	closer(file_to);
 	return (0);
 }
+
+/**
+ * closer - close with error
+ * @arg_files: argv 1 or 2
+ * Return: void
+ */
+void closer(int arg_files)
+{
+	int close_err;
+
+	close_err = close(arg_files);
+
+	if (close_err == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", arg_files);
+		exit(100);
+	}
+}
+
